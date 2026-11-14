@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7b6cf">
+<meta name="description" content="Descarga BookMar para Android y consulta el catálogo y tus préstamos de biblioteca.">
+<title>Descargar BookMar</title>
+<style>
+:root{--navy:#c2527c;--pink:#f4a6c0;--lav:#d9c8fa;--bg:#fff5f8;--ink:#4a2a3b;--mut:#94707f;--line:#f3d3df}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+.hero{background:linear-gradient(160deg,#f9c4d8,#f4a6c0 60%,#e8b4f0);color:#4a2038;text-align:center;padding:44px 20px 70px}
+.hero svg{width:96px;height:96px;filter:drop-shadow(0 8px 16px rgba(194,82,124,.35))}
+.hero h1{margin:14px 0 4px;font-size:34px;letter-spacing:.3px}
+.hero p{margin:0;opacity:.8;font-size:17px}
+.wrap{max-width:560px;margin:-44px auto 40px;padding:0 16px}
+.card{background:#fff;border-radius:18px;padding:22px;box-shadow:0 6px 20px rgba(214,110,150,.2);margin-bottom:16px}
+.dl{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:linear-gradient(135deg,#f7b6cf,#f08fb3);color:#4a1730;box-shadow:0 6px 14px rgba(240,143,179,.45);border:0;border-radius:14px;padding:18px;font-size:20px;font-weight:800;text-decoration:none;cursor:pointer}
+.dl:active{transform:scale(.98)}
+.meta{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:12px;font-size:13px;color:var(--mut)}
+.warn{display:none;margin-top:14px;background:#fff3d9;color:#76551b;border-radius:12px;padding:12px 14px;font-size:14px}
+.ios{display:none;margin-top:14px;background:#efe6fd;color:#4b2f86;border-radius:12px;padding:12px 14px;font-size:14px}
+h2{font-size:18px;margin:0 0 12px}
+ol{margin:0;padding:0;list-style:none;counter-reset:s}
+ol li{counter-increment:s;position:relative;padding:0 0 14px 44px;font-size:15px}
+ol li:last-child{padding-bottom:0}
+ol li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--pink);color:#4a2038;font-weight:800;display:flex;align-items:center;justify-content:center}
+ol li b{display:block;margin-bottom:2px}
+.note{font-size:13px;color:var(--mut)}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:14px}
+.feat div{background:#fff0f5;border-radius:12px;padding:10px 12px}
+.link{background:none;border:0;color:#8a5cd0;font-weight:700;font-size:14px;cursor:pointer;padding:6px 0}
+footer{text-align:center;color:var(--mut);font-size:12px;padding-bottom:30px}
+@media(max-width:420px){.hero{padding-top:32px}.hero h1{font-size:30px}.card{padding:18px}.feat{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg viewBox="0 0 512 512" role="img" aria-label="Libros de BookMar"><rect width="512" height="512" rx="110" fill="#fff5f8"/><g transform="translate(96 110)"><rect x="20" y="20" width="110" height="270" rx="10" fill="#d9c8fa"/><rect x="140" y="20" width="110" height="270" rx="10" fill="#f4a6c0"/><rect x="260" y="40" width="90" height="250" rx="10" fill="#b8e6d2" transform="rotate(10 305 165)"/></g></svg>
+  <h1>BookMar</h1>
+  <p>Tu biblioteca en el celular</p>
+</header>
+
+<main class="wrap">
+  <section class="card" aria-label="Descarga de BookMar">
+    <a id="dl" class="dl" href="./BookMar.apk" download="BookMar.apk">⬇️ Descargar BookMar para Android</a>
+    <div class="meta"><span id="size">Instalador APK</span><span>Para teléfonos Android</span><span>Gratis</span></div>
+    <div id="warn" class="warn">No se encontró <b>BookMar.apk</b> junto a esta página. Sube el APK a la carpeta donde se publica <b>index.html</b>; luego vuelve a cargar esta página.</div>
+    <div id="ios" class="ios">Este instalador es solo para teléfonos <b>Android</b>. Abre esta página desde un dispositivo Android.</div>
+    <div style="text-align:center"><button class="link" id="copy" type="button">📋 Copiar enlace de esta página</button></div>
+  </section>
+
+  <section class="card">
+    <h2>Cómo instalarla</h2>
+    <ol>
+      <li><b>Descarga el APK</b>Toca el botón rosa y espera a que termine.</li>
+      <li><b>Abre el archivo</b>Toca la notificación de descarga o busca <i>BookMar.apk</i> en Descargas.</li>
+      <li><b>Permite la instalación si Android lo solicita</b>Autoriza temporalmente a tu navegador a instalar aplicaciones descargadas de esta página.</li>
+      <li><b>Instala BookMar</b>Confirma que descargaste el archivo desde el sitio de confianza antes de abrirlo.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>Qué puedes hacer</h2>
+    <div class="feat">
+      <div>🔎 Buscar libros y consultar su información</div><div>✅ Ver disponibilidad de ejemplares</div>
+      <div>🔖 Consultar tus préstamos</div><div>📄 Obtener constancias en PDF</div>
+      <div>🔑 Usar una llave de recuperación</div><div>👤 Crear tu cuenta en la aplicación</div>
+    </div>
+    <p class="note">La disponibilidad de cada función depende de la conexión de BookMar con su base de datos.</p>
+  </section>
+  <footer>BookMar · Biblioteca</footer>
+</main>
+
+<script>
+(function () {
+  var ua = navigator.userAgent || '';
+  if (/iPhone|iPad|iPod/i.test(ua)) document.getElementById('ios').style.display = 'block';
+  if (location.protocol === 'http:' || location.protocol === 'https:') {
+    fetch('./BookMar.apk', { method: 'HEAD', cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error('APK no disponible');
+      var n = parseInt(r.headers.get('content-length') || '0', 10);
+      if (n) document.getElementById('size').textContent = 'APK · ' + (n / 1048576).toFixed(1) + ' MB';
+    }).catch(function () {
+      // No se bloquea el botón: algunos servidores no permiten solicitudes HEAD.
+      document.getElementById('warn').style.display = 'block';
+    });
+  }
+  document.getElementById('copy').onclick = function () {
+    var b = this, url = location.href.split('#')[0];
+    (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(function () { b.textContent = '✅ Enlace copiado'; })
+      .catch(function () { prompt('Copia este enlace:', url); });
+  };
+})();
+</script>
+</body>
+</html>
